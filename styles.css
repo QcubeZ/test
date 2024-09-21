@@ -1,0 +1,126 @@
+/* General Styling */
+body {
+  font-family: Arial, sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  margin: 0;
+}
+
+body.dark-mode {
+  background-color: #0d1117; /* GitHub dark mode background */
+  color: #c9d1d9;
+}
+
+/* Top Header Styles */
+#top-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #161b22;
+  color: #fff;
+}
+
+/* Button Container */
+#button-container {
+  display: flex;
+  justify-content: center; /* Center buttons */
+  margin: 10px 0; /* Space above and below */
+}
+
+#button-container button {
+  margin: 0 10px; /* Space between buttons */
+  background-color: #238636; /* GitHub button green */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+#button-container button:hover {
+  background-color: #2ea043; /* Hover color */
+}
+
+/* Search Bar Container */
+#search-bar-container {
+  padding: 10px;
+  text-align: center;
+}
+
+#search-input {
+  padding: 10px;
+  width: 50%;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+/* Novel List Styles */
+#novel-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+  justify-content: center;
+  margin: 0 50px; /* Margin on both sides */
+  background-color: #1e242c; /* List background */
+}
+
+.novel-item {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 10px;
+  border-radius: 8px;
+  max-width: 275px; /* Maximum width */
+  width: 100%; /* Allow item to be flexible */
+  height: 195px; /* Total height */
+  overflow: hidden;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.novel-image-container {
+  width: 35%; /* 50% width for the image container */
+  height: 100%;
+  overflow: hidden; /* Hide overflow */
+}
+
+.novel-image-container img {
+  width: 100%; /* Full width of container */
+  height: 100%; /* Maintain aspect ratio */
+  max-height: 150px; /* Fixed height */
+  object-fit: cover; /* Maintain aspect ratio */
+  transition: transform 0.3s ease; /* Transition for hover effect */
+}
+
+.novel-info {
+  flex-grow: 1; /* Allow text to take available space */
+  display: flex;
+  flex-direction: column; /* Stack title and summary vertically */
+  justify-content: space-between; /* Distribute space */
+  padding-left: 10px; /* Space between image and text */
+  width: 50%; /* 50% width for the info container */
+}
+
+.novel-item h3 {
+  margin: 0; /* Remove margins */
+  font-size: calc(1.1em + 1vw); /* Responsive font size */
+  max-height: 45%; /* Maximum height */
+  overflow: hidden; /* Hide overflow */
+  text-overflow: ellipsis; /* Ellipsis for overflowed text */
+  white-space: nowrap; /* Prevent text wrapping */
+  flex-shrink: 1; /* Allow it to shrink */
+  display: flex; /* Use flex to allow for resizing */
+  align-items: center; /* Center align the text */
+}
+
+/* Hide scrollbar for webkit browsers (Chrome, Safari) */
+.novel-summary::-webkit-scrollbar {
+  display: none; /* Hide scrollbar */
+}
+
+/* Hover effect */
+.novel-item:hover {
+  transform: scale(1.05);
+  background-color: rgba(255, 255, 255, 0.1); /* Hover effect */
+}
